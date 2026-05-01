@@ -14,6 +14,8 @@ function App() {
     try {
       setLoading(true);
       setError("");
+const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+
 
       const response = await fetch(
         `https://www.omdbapi.com/?s=${userInput}&apikey=${apiKey}`
